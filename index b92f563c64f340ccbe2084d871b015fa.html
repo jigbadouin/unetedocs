@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>index</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b92f563c-64f3-40cc-be20-84d871b015fa" class="page sans"><header><img class="page-cover-image" src="index%20b92f563c64f340ccbe2084d871b015fa/UNETE_COVER.jpg" style="object-position:center 64.7%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🏫</span></div><h1 class="page-title">index</h1></header><div class="page-body"><p id="d5147ad2-411d-48ff-a654-db7da163c917" class="block-color-gray">Esta es la documentación unificada en formato wiki de todo lo relativo a los proyectos de ciencia de datos de UNETE</p><p id="5981e64a-4830-49df-a7d2-8679106134a3" class="">
+</p><div id="7cc45732-d8b2-4c49-9c4e-b019f2381903" class="column-list"><div id="42bbcd84-3608-46e3-a79a-02405f02e98c" style="width:50%" class="column"><h2 id="26f5fe5c-029f-4e3a-8e45-473a81639027" class="">Guias y procesos </h2><hr id="e20b3652-3c43-45e1-b665-7e30fb19cab1"/><figure id="13b252dd-c7f7-4022-bb2f-eba78bcae1c7" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Iniciando%2013b252ddc7f74022bb2feba78bcae1c7.html"><span class="icon">🚀</span>Iniciando</a></figure><figure id="426659db-527c-4028-a4fb-45ede79652cf" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Metodologi%CC%81a%20CRISP-DM%20426659db527c4028a4fb45ede79652cf.html"><span class="icon">🤖</span>Metodología CRISP-DM</a></figure><figure id="18d1b9ce-ca3c-460f-a079-bbad352907af" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Ciclo%20de%20desarrollo%2018d1b9ceca3c460fa079bbad352907af.html"><span class="icon">🔄</span>Ciclo de desarrollo</a></figure><figure id="4a6fd8fe-7344-4e39-b6f7-01214eafdb54" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Como%20desplegar%20modelos%204a6fd8fe73444e39b6f701214eafdb54.html"><span class="icon">🚢</span>Como desplegar modelos </a></figure><figure id="8ac6faaa-5c39-42c0-85f8-ec6018b375b6" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Comandos%20u%CC%81tiles%208ac6faaa5c3942c085f8ec6018b375b6.html"><span class="icon">🛠</span>Comandos útiles </a></figure><figure id="00bad69c-7121-484b-ba4e-ac443a355d80" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Fundamentacio%CC%81n%20cienti%CC%81fica%2000bad69c7121484bba4eac443a355d80.html"><span class="icon">📖</span>Fundamentación científica</a></figure><h2 id="4ead2a01-cc89-409e-9d6a-25e68f69fc75" class="">Proyectos </h2><hr id="27dea4c9-0e92-4092-b835-ab2f708bd6d1"/><figure id="96c57ab1-fbb3-4e80-8e7d-6d3f684f3453" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/MCDD%2096c57ab1fbb34e808e7d6d3f684f3453.html"><span class="icon">🧑🏻‍🏫</span>MCDD</a></figure><figure id="ecd5e732-246e-4cdf-8a4a-28f6e100ac98" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Bita%CC%81coras%20facilitadores%20ecd5e732246e4cdf8a4a28f6e100ac98.html"><span class="icon">✏️</span>Bitácoras facilitadores </a></figure><figure id="41fb746c-beb0-4e0a-8269-c274be95cf79" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Taller%20de%20comprensio%CC%81n%20lectora%2041fb746cbeb04e0a8269c274be95cf79.html"><span class="icon">📚</span>Taller de comprensión lectora</a></figure><figure id="40371d90-721a-4eb8-af79-20364074ff66" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Bita%CC%81cora%2040371d90721a4eb8af7920364074ff66.html"><span class="icon">🛬</span>Bitácora </a></figure><p id="d716c90f-1065-47a6-b23c-4a30efe8f43c" class="">
+</p></div><div id="7b0c5257-a526-4472-aec0-b8a5bf7f7a74" style="width:50%" class="column"><h2 id="3191466c-b6df-43f0-978b-b4d6e82b43d6" class="">Código </h2><hr id="7262e409-ecb9-4c9f-806a-e1bd6ec02a40"/><figure id="1580cef7-e8e7-4793-b954-d8b65a89fd80" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Revisio%CC%81n%20de%20co%CC%81digo%201580cef7e8e74793b954d8b65a89fd80.html"><span class="icon">✔️</span>Revisión de código</a></figure><figure id="ca19472f-84b6-44a1-b5fd-2ecb354d9bb9" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/React%20ca19472f84b644a1b5fd2ecb354d9bb9.html"><img class="icon" src="https://png.pngtree.com/svg/20170710/12175a889e.svg"/>React  </a></figure><figure id="0814fc3a-cd75-451d-8901-f4c53440496f" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Backend%200814fc3acd75451d8901f4c53440496f.html"><span class="icon">🖥</span>Backend</a></figure><figure id="74bea5d4-8bc0-40ca-b612-c8ea943bda5f" class="link-to-page"></figure><p id="8d2970f6-8d59-4b5b-8c4f-e56bdaf33fdf" class="">
+</p><p id="fb7ba238-63f6-45a2-a0a9-8b73fd3ff59a" class="">
+</p><h2 id="7e86a964-acc6-43d1-b6a9-0417bacc8b6d" class="">Infraestructura y tecnologías</h2><hr id="4cbb03cf-a470-4ecb-9d98-091982b82d83"/><figure id="05613777-6c39-400a-909b-752f47aba344" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/AWS%20056137776c39400a909b752f47aba344.html"><span class="icon">🕸</span>AWS</a></figure><figure id="898aef81-ffce-431f-9e42-7238610d3f95" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Deepnote%20Jupyter%20notebook%20898aef81ffce431f9e427238610d3f95.html"><span class="icon">📮</span>Deepnote / Jupyter notebook</a></figure><figure id="d14b8e4b-7738-4027-9e97-f6715e9300c2" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/CircleCI%20d14b8e4b773840279e97f6715e9300c2.html"><span class="icon">⚪</span>CircleCI</a></figure><figure id="8d262b23-17ec-4b21-bd2e-38cd2c483972" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/AutoML%208d262b2317ec4b21bd2e38cd2c483972.html"><span class="icon">💻</span>AutoML</a></figure><figure id="062b8f5b-0ecd-4284-810c-586df9acd745" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Flask%20062b8f5b0ecd4284810c586df9acd745.html"><span class="icon">🧩</span>Flask</a></figure><h2 id="94853049-73fe-4902-9295-fd788ca8c91f" class="">Métodos de análisis ML, AI, DL, NLP </h2><hr id="df155a35-324e-41d7-a749-97eb0b23efe9"/><figure id="22fb2141-543d-4849-9487-602ec3d29abd" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Bosque%20aleatorio%2022fb2141543d48499487602ec3d29abd.html"><span class="icon">🌳</span>Bosque aleatorio </a></figure><figure id="9bdaaf03-2114-4b91-ba3c-bf7072a7abe1" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/A%CC%81rbol%20de%20decisio%CC%81n%209bdaaf0321144b91ba3cbf7072a7abe1.html"><span class="icon">🌴</span>Árbol de decisión </a></figure><figure id="4bcf74b3-a926-43c1-8d15-7ff230cae33a" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Procesamiento%20del%20lenguaje%20natural%20(NLP)%204bcf74b3a92643c18d157ff230cae33a.html"><span class="icon">🗣️</span>Procesamiento del lenguaje natural (NLP)</a></figure><figure id="6f6ae645-66bd-4ae1-bdd4-1708650b2cc7" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Aprendizaje%20profundo%20(DL)%206f6ae64566bd4ae1bdd41708650b2cc7.html"><span class="icon">📊</span>Aprendizaje profundo (DL)</a></figure><figure id="b3e1854f-e5f1-4ad4-98e5-ba44fee3ee55" class="link-to-page"><a href="index%20b92f563c64f340ccbe2084d871b015fa/Pruebas%20b3e1854fe5f14ad498e5ba44fee3ee55.html"><span class="icon">📊</span>Pruebas </a></figure><p id="e94d36ae-0f55-481f-a7a3-f68ad4031a9b" class="">
+</p></div></div><p id="ed6f1778-e487-4a7d-ac5a-bf28c71ce245" class="">
+</p><p id="aaef5de2-7acd-4255-a9ea-98e74a8ff22c" class="">
+</p><p id="33c29e4a-d060-4636-9ed3-139e8418ba21" class="">
+</p></div></article></body></html>
